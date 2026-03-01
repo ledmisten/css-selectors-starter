@@ -433,7 +433,7 @@ input, select{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-input:focus{
+input{
     outline: 4px solid var(--orange);
     outline-offset: 2px;
     border: none;
@@ -598,7 +598,7 @@ input#mySubmit:focus{
     select all of the divs in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#more > div{
+#more div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -610,7 +610,7 @@ input#mySubmit:focus{
     select the first div in the more styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-#more div:first-child{
+#more>div{
     width: 300px;
     height: 300px;
     background-color: var(--dv-red);
@@ -623,7 +623,7 @@ input#mySubmit:focus{
     select the second div in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#more>div:nth-child(2){
+#more>div>div{
     width: 250px;
     height: 250px;
     background-color: var(--dv-orange);
@@ -635,7 +635,7 @@ input#mySubmit:focus{
     select the third div in the more styling section using the ID, descendant, and class name selectors
 */
 /* ----- */
-#more > div.third{
+#more>div>div>div.third{
     width: 200px;
     height: 200px;
     background-color: var(--dv-yellow);
@@ -647,7 +647,7 @@ input#mySubmit:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#more > div:nth-child(3){
+#more>div>div>div.third>div{
     width: 150px;
     height: 150px;
     background-color: var(--dv-mint);
@@ -659,7 +659,7 @@ input#mySubmit:focus{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-{
+#more>div>div>div.third>div>div.inner{
     width: 100px;
     height: 100px;
     background-color: var(--dv-lt-blue);
@@ -674,7 +674,7 @@ input#mySubmit:focus{
     select the section with the ID of software by its ID 
 */
 /* ----- */
-#software{
+#software {
     margin-top: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -687,7 +687,7 @@ input#mySubmit:focus{
     select the links in the software section using the ID, tag name, and child/descendant selector
 */
 /* ----- */
-#software > a {
+#software a {
     width: 100px;
     height: auto;
     margin: 0 auto;
@@ -702,7 +702,7 @@ input#mySubmit:focus{
     select the links in the software section on hover using the ID, tag name, child/descendant selector, and pseudo-class selector
 */
 /* ----- */
-#software > a:hover{
+#software a:hover{
     background-color: var(--dk-gray);
     box-shadow: var(--box-shadow-sm);
 }
@@ -713,7 +713,7 @@ input#mySubmit:focus{
     select the SVGs in the software section using the ID, tag name, and descendant selectors
 */
 /* ----- */
-#software > a svg{
+#software a svg{
     stroke: var(--dk-gray);
 }
 
@@ -826,7 +826,7 @@ input#mySubmit:focus{
     select the first div in the border styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-#borders div:first-child{
+#borders>div{
     width: 300px;
     height: 300px;
     margin: 16px auto;
@@ -839,7 +839,7 @@ input#mySubmit:focus{
     select the second div in the border styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#borders div:nth-child{
+#borders>div>div{
     width: 250px;
     height: 250px;
     border: 6px dotted var(--dv-orange);
@@ -851,7 +851,7 @@ input#mySubmit:focus{
     select the third div in the border styling section using the ID, descendant, and class name selectors
 */
 /* ----- */
-#borders div.dashed{
+#borders>div>div>div.dashed{
     width: 200px;
     height: 200px;
     border: 6px dashed var(--dv-yellow);
@@ -863,7 +863,7 @@ input#mySubmit:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#borders div:nth-child(3){
+#borders>div>div>div.dashed>div{
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
@@ -875,7 +875,7 @@ input#mySubmit:focus{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#more > div.inner{
+#borders>div>div>div.dashed>div>div{
     width: 100px;
     height: 100px;
     border: 6px inset var(--dv-lt-blue);
