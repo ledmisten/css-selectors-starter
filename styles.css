@@ -242,7 +242,7 @@ main{
     select the sections on the page that are direct descendants to the main by tag names and using the direct descendant selector
 */
 /* ----- */
-main > section > p > div{
+main > section{
     display: block;
     width: calc(100% - 2rem);
     max-width: calc(500px - 2rem);
@@ -293,7 +293,7 @@ TO DO:
 select all of the spans by tag name
 */
 /* ----- */
-span {
+span{
     display: block;
 }
 
@@ -309,7 +309,7 @@ span {
     select the h2 in the first section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
- h2#image{
+ #image>h2{
     padding: 12px 0;
     background-color: var(--blue);
     color: var(--white);
@@ -324,7 +324,7 @@ span {
     select the h2 in the second section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
- h2#nav{
+ #nav>h2{
     padding: 12px 0;
     background-color: var(--green);
     color: var(--white);
@@ -336,7 +336,7 @@ span {
     select the unordered list in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-nav > ul {
+#nav>ul {
     display: block;
     list-style-type: none;
     padding: 0;
@@ -349,7 +349,7 @@ nav > ul {
     select the list items in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-nav > ul > li{
+#nav>ul{
     display: block;
     width: 100%;
 }
@@ -360,7 +360,7 @@ nav > ul > li{
     select the anchor tags in the navigation using the tag names and child/descendant selectors
 */
 /* ----- */
-nav > a{
+#nav>ul>li a{
     display: block;
     width: 90%;
     margin: 16px auto;
@@ -396,7 +396,7 @@ nav > a:hover{
     select the h2 in the third section using the class name selector
 */
 /* ----- */
- h2#form{
+ #form h2{
     padding: 12px 0;
     background-color: var(--dv-fuchsia);
     color: var(--white);
@@ -408,7 +408,7 @@ nav > a:hover{
     select all of the inputs, labels, select dropdowns and text areas on the page by tag name
 */
 /* ----- */
-input, label{
+#form.input, #label{
     display: block;
     width: 95%;
     margin: 0.5rem auto;
@@ -422,7 +422,7 @@ input, label{
     select all of the inputs and selects by tag name
 */
 /* ----- */
-input{
+#input{
     height: 2rem;
     border: 2px solid var(--dk-gray);
 }
@@ -433,7 +433,7 @@ input{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-input:focus{
+#input:focus{
     outline: 4px solid var(--orange);
     outline-offset: 2px;
     border: none;
@@ -445,7 +445,7 @@ input:focus{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-input:focus{
+#input:focus{
     outline-color: var(--dv-dk-blue);
 }
 
@@ -455,7 +455,7 @@ input:focus{
     select the labels in the form using the tag name/element selector
 */
 /* ----- */
-labels{
+#label{
     font-size: 1.25rem;
     margin-top: 16px;
 }
@@ -479,7 +479,7 @@ labels{
     select all of the submit buttons (by tag name/type attribute) on the page
 */
 /* ----- */
-submit{
+input.submit{
     display: block;
     margin: 32px auto 16px;
     width: 100%;
@@ -502,7 +502,7 @@ submit{
     select all of the submit buttons on hover (by tag name/type attribute name) on the page
 */
 /* ----- */
-submit:hover{
+.submit:hover{
     box-shadow: var(--box-shadow-sm);
     color: var(--purple);
     background-color: var(--lt-gray);
@@ -514,7 +514,7 @@ submit:hover{
     select all of the submit buttons on focus (by tag name/type attribute/pseudo-class) on the page
 */
 /* ----- */
-submit:focus{
+#submit:focus{
     box-shadow: var(--box-shadow-sm);
     outline: 4px solid var(--dv-dk-blue);
     outline-offset: 1px;
